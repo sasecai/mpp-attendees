@@ -171,3 +171,13 @@ input {
 .active-page {
   background-color: #430fff;
 }
+
+.page-item {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.edit-button {
+  margin-left: 1px;
+  margin-right: 1px;
+}

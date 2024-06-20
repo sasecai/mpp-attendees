@@ -8,10 +8,11 @@ const ModalUpdateAttendee = props => {
     const [name, setName] = useState(attendee.name);
     const [email, setEmail] = useState(attendee.email);
     const [phone, setPhone] = useState(attendee.phone);
+    const [city, setCity] = useState(attendee.city);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(name, email, phone)
+        onSubmit(name, email, phone, city)
         // onClose();
     }
     return (
@@ -20,13 +21,10 @@ const ModalUpdateAttendee = props => {
                 
                 <form onSubmit={handleSubmit}>
                     <button className="close" onClick={onClose}>Cancel</button>
-                    {/* defaultValue={attendee.name} */}
-                    {/* defaultValue={attendee.email} */}
-                    {/* defaultValue={attendee.phone} */}
-                    {/* {console.log(attendee.name)} */}
                     <input type="text" value={name} placeholder="Name" onChange={e => setName(e.target.value)} />
                     <input type="text" value={email} placeholder="Email" onChange={e => setEmail(e.target.value)} />
                     <input type="text" value={phone} placeholder="Phone" onChange={e => setPhone(e.target.value)} />
+                    <input type="text" value={city} placeholder="City" onChange={e => setCity(e.target.value)} />
                     <button type="submit">Update attendee</button>
                 </form>
             </div>
